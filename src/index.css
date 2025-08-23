@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+body{
+  min-height: 100vh;
+  margin: 0;
+}
+
+.custom-scroll {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox, Safari 18.2+, Chromium 121+ */
+}
+.custom-scroll::-webkit-scrollbar { 
+    display: none;  /* Older Safari and Chromium */
+}
+
+p{
+  margin: 0;
+}
+
+img{
+  margin: 0;
+}
