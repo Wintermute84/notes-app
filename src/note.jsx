@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 export default function Note({content,date,index,toggleDelete,toggleEdit,mode}){
   return(
-    <div className="min-h-[200px] max-w-[90%] border-black border m-3 rounded min-w-[300px] prose font-mono flex flex-col">
+    <div className="min-h-[200px] max-h-[400px] max-w-[90%] border-black border m-3 rounded min-w-[300px] prose font-mono flex flex-col">
       <div className="h-[40px] border-b w-full flex items-center justify-between gap-1 p-2">
         {date}
         <div className=" flex items-center justify-end gap-1">
@@ -17,7 +17,7 @@ export default function Note({content,date,index,toggleDelete,toggleEdit,mode}){
           </button>
         </div>
       </div>
-      <div className="p-2 flex-1">
+      <div className="p-2 flex-1 overflow-y-auto custom-scroll">
         <Markdown value={content} options={{
               breaks: true,
               gfm: true,
